@@ -38,6 +38,7 @@ try:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.dataframe(back_from_function)
 
+streamlit.stop()
   
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:

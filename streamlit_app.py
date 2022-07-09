@@ -29,6 +29,7 @@ def get_fruityvice_data(this_fruit_choice):
   return fruityvice_normalized
 
 streamlit.header("Fruityvice Fruit Advice!")
+
 try:
   fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
   if not fruit_choice:
@@ -37,7 +38,6 @@ try:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.dataframe(back_from_function)
 
-  
   
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
